@@ -1,7 +1,7 @@
 # Marjia-LMS-frontend
 Marjia-LMS is a learning platform made by Tarikul with guided team members.
 
-## Used Technologies
+# Used Technologies
 In this template I'm using many front-end technologies. For your knowledge some of them are given below:-
 1. HTML5
 2. Bootstrap v-5
