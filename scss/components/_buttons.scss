@@ -1,0 +1,19 @@
+@use '../custom' as *;
+
+#btn-course-grid-view,
+#btn-course-list-view {
+    font-size: 1.2rem;
+
+    &:focus {
+        box-shadow: 0 0 0 0.25rem rgb($white, 0.25);
+    }
+}
+
+#btn-course-grid-view {
+    color: $green;
+    margin-right: 0.25rem;
+}
+
+#btn-course-list-view {
+    color: $blue;
+}

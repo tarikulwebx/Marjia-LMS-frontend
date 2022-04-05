@@ -1,0 +1,176 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+@use '../components/animations' as *;
+
+
+.intro-section {
+    padding: 4rem 0 0 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba($indigo, 0.95), rgba($pink, 0.95));
+
+
+    // INTROS
+    .intro {
+        position: relative;
+        font-family: 'Heebo', sans-serif;
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 3.25rem;
+        }
+
+        &__title {
+            font-weight: 800;
+            font-size: 3.5rem;
+            text-transform: capitalize;
+            margin-bottom: 1rem;
+            color: $white;
+
+            @include media-breakpoint-down(md) {
+                font-size: 3rem;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 2.75rem;
+            }
+            
+        }
+
+        &__description {
+            font-weight: 500;
+            margin-bottom: 1.35rem;
+            font-size: 1.45rem;
+            color: $gray-100;
+
+            @include media-breakpoint-down(md) {
+                font-size: 1.3rem;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 1.25rem;
+            }
+        }
+
+        &__btn {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 500;
+            font-size: 1.03rem;
+            color: $white;
+            text-shadow: 2px 2px 4px rgba($dark, 0.1);
+            box-shadow: 2px 2px 4px rgba($dark, 0.1);
+            transition: 0.3s ease-in-out;
+
+            &:first-of-type {
+                color: $yellow;
+                border: 0.1rem solid rgba($yellow, 0.95);
+                padding: 0.7rem 3.25rem 0.7rem 1.1rem;
+                position: relative;
+                transition: all;
+                margin-right: 1rem;
+                
+                span {
+                    position: absolute;
+                    top: 50%;
+                    right: 5px;
+                    transform: translateY(-50%);
+                    background-color: $yellow;
+                    width: 2.25rem;
+                    height: 2.25rem;
+                    border-radius: 50%;
+                    transition: all;
+
+                    i {
+                        color: rgba($purple, 1.0);
+                        font-size: 1rem;
+                        line-height: 2.25rem;
+                        transition: all;
+                    }
+                }
+
+                &:hover {
+                    border-color: $secondary;
+                    background-color: $indigo;
+                    color: $white;
+
+                    span {
+                        background-color: $white;
+                        i {
+                            color: $indigo;
+                        }
+                    }
+                }
+            }
+
+            &:last-of-type {
+                position: relative;
+                background: linear-gradient(to right, $gray-100, $gray-300);
+                padding: 0.7rem 1.1rem;
+                color: $dark;
+                transition: all;
+
+                @include media-breakpoint-down(sm) {
+                    display: none;
+                    opacity: 0;
+                }
+
+                span {
+                    margin-left: 0.25rem;
+                }
+
+                &:hover {
+                    background: none;
+                    background-color: $primary;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+
+
+// VIDEO BOX
+.video-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+    @include media-breakpoint-down(lg) {
+        padding-bottom: 1.75rem;
+    }
+
+    a  {
+        @include absoluteCenter;
+
+        span i {
+            font-size: 5rem;
+            color: $secondary;
+        }
+    }
+}
+
+
+// BORDER ANIMATION
+.border-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5rem;
+    height: 5rem;
+    border: 0.5rem solid $gray-500;
+    border-radius: 50%;
+    -webkit-animation: pulse-border 1.5s linear infinite;
+            animation: pulse-border 1.5s linear infinite;
+
+    &--border-1 {
+        -webkit-animation-delay: 1s;
+                animation-delay: 1s;
+        opacity: 1;
+    }
+
+    &--border-2 {
+       -webkit-animation-delay: 1.5;
+               animation-delay: 1.5; 
+       opacity: 0;
+    }
+}

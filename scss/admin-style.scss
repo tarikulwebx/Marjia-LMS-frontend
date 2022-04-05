@@ -1,0 +1,17 @@
+@import "admin-components/variables";
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+@import "admin-components/mixins.scss";
+@import "admin-components/global.scss";
+@import "admin-components/utilities.scss";
+
+@import "admin-components/dropdowns.scss";
+@import "admin-components/navs.scss";
+@import "admin-components/buttons.scss";
+@import "admin-components/cards.scss";
+@import "admin-components/charts.scss";
+@import "admin-components/login.scss";
+@import "admin-components/error.scss";
+@import "admin-components/footer.scss";

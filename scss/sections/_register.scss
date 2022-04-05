@@ -1,0 +1,59 @@
+@use '../custom' as *;
+
+.register {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 400;
+
+    .card {
+        border-radius: 0.4rem;
+    }
+
+    &__thumb {
+        position: relative;
+        background: linear-gradient(135deg, $primary, $secondary);
+        border-top-left-radius: 0.4rem;
+        border-bottom-left-radius: 0.4rem;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            height: auto;
+        }
+    }
+
+    .form-control  {
+        font-size: 0.85rem;
+        background-color: $gray-100;
+        padding: 0.75rem 1rem; 
+    }
+
+    .btn {
+        font-size: 0.85rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .btn-google {
+        background-color: $google-color;
+        color: $white;
+        margin-bottom: 0.5rem;
+    }
+
+    .btn-facebook {
+        background-color: $facebook-color;
+        color: $white;
+    }
+
+    .small {
+        text-decoration: none;
+        font-size: 0.8rem;
+        transition: 0.2s;
+        font-weight: 400;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

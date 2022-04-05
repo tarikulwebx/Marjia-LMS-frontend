@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Marjia LMS</title>
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/vendors/css/glightbox.min.css">
+    <link rel="stylesheet" href="assets/vendors/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/vendors/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR SECTION: START -->
+    <nav class="navbar top-navbar navbar-expand-xl navbar-light shadow sticky-top flex-nowrap">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo-white.svg" alt="Logo" class="img-fluid logo">
+            </a>
+            <button class="navbar-toggler collapsed ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="toggler-icon top-bar"></span>
+                <span class="toggler-icon middle-bar"></span>
+                <span class="toggler-icon bottom-bar"></span>
+            </button>
+            <div class="collapse w-100 navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-xl-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="courses.html">Courses</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="blog.html">Blog</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="contact-us.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Others
+                        </a>
+                        <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdown">
+                            <li><a href="instructor-dashboard.html" class="dropdown-item">Instructor Dashboard</a></li>
+                            <li><a href="student-dashboard.html" class="dropdown-item">Student Dashboard</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a href="register.html" class="dropdown-item">Register</a></li>
+                            <li><a href="login.html" class="dropdown-item">Login</a></li>
+                            <li><a href="forget-password.html" class="dropdown-item">Forget Password</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a href="about-us.html" class="dropdown-item">About us</a></li>
+                            <li><a href="404.html" class="dropdown-item">404 not found</a></li>
+                            <li><a href="faq-page.html" class="dropdown-item">FAQ page</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- NAVBAR SEARCH FORM CONTENT -->
+                <form class="d-flex search-form">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <!-- USER DROPDOWN CONTENT -->
+            <div class="dropdown user-dropdown ml-1">
+                <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="images/user-thumbs/pp_khalid.jpg" class="img-fluid" alt="User picture">
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="dropdownMenuLink">
+                    <li>
+                        <h4 class="dropdown-header">Abdullah Khalid</h4>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="student-dashboard.html">My Profile <i class="fa-solid fa-user"></i></a></li>
+                    <li><a class="dropdown-item" href="#">Admin Dashboard <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                    <li><a class="dropdown-item" href="login.html">Login <i class="fa fa-sign-in"></i></a></li>
+                    <li><a class="dropdown-item" href="register.html">Register <i class="fa-solid fa-user-plus"></i></a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR SECTION: END -->
+
+
+    <!-- PROFILE SECTION: START -->
+    <section class="profile">
+        <!-- Background -->
+        <div class="profile__cover"></div>
+        
+        <!-- Head -->
+        <div class="profile__head">
+            <div class="container">
+                <div class="card border-0 p-0">
+                    <div class="row d-block d-sm-flex">
+                        <div class="col-auto">
+                            <img src="images/user-thumbs/pp_khalid.jpg" class="img-fluid shadow" width="100" alt="">
+                        </div>
+                        <div class="col align-self-center">
+                            <div class="user-info d-md-flex align-items-center">
+                                <div>
+                                    <h2 class="user-info__name mt-3 mt-sm-5">Abdullah Khalid</h2>
+                                    <ul class="user-info__list list-inline p-0 m-0">
+                                        <li class="list-inline-item">
+                                            <span class="h6">12</span> 
+                                            <span class="text">Enrolled courses</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span class="h6">35</span> 
+                                            <span class="text">Completed courses</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span class="h6">1234</span> 
+                                            <span class="text">Completed lessons</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="student-dashboard.html?#courses" class="btn btn-primary view-btn mt-3 mt-md-5 ms-auto text-nowrap"><i class="fa-solid fa-eye me-2 fa-sm"></i> Enrolled Courses</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-row align-items-center align-content-between d-xl-none">
+                    <h4 class="mb-0 text-gray-700 fw-500">Navigation</h4>
+                    <button class="ms-auto btn btn-primary offcanvas-toggler-btn d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">Menu <i class="fa-solid fa-sliders ms-2"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="profile__content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3">
+                        <nav class="navbar navbar-light navbar-expand-xl mx-0 py-0">
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="visibility: hidden;" aria-hidden="true">
+                                <!-- Offcanvas header -->
+                                <div class="offcanvas-header bg-light">
+                                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">My profile</h5>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <!-- Offcanvas body -->
+                                <div class="offcanvas-body p-3 p-xl-0">
+                                    <div class="nav-menu bg-dark border pb-0 p-3 w-100">
+                                        <!-- Dashboard menu -->
+                                        <div class="list-group list-group-dark list-group-borderless">
+                                            <a class="list-group-item " href="student-dashboard.html"><i class="fa-solid fa-gauge-high me-2"></i>Dashboard</a>
+                                            <a class="list-group-item" href="student-profile-edit.html"><i class="fa-solid fa-pen-to-square me-2"></i>Edit Profile</a>
+                                            <a class="list-group-item" href="student-dashboard.html?#courses"><i class="fa-solid fa-graduation-cap me-2"></i>Courses</a>
+                                            <a class="list-group-item active" href="student-profile-reviews.html"><i class="fa-solid fa-star me-2"></i>Reviews</a>
+                                            <a class="list-group-item" href="student-profile-delete.html"><i class="fa-solid fa-trash-can me-2"></i>Delete Profile</a>
+                                            <a class="list-group-item text-danger bg-danger-soft-hover" href="#"><i class="fa-solid fa-right-from-bracket me-2"></i>Sign Out</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col-xl-9">
+
+                        <!-- Your reviews -->
+                        <div class="card profile__content__reviews">
+                            <h3 class="card-header py-3 bg-white fw-700">My Reviews</h3>
+                            <div class="card-body">
+                                <!-- Review START -->
+                                <div class="reviews">
+                                    
+                                    <!-- Review Item -->
+                                    <div class="reviews__review d-sm-flex">
+                                        <img src="images/user-thumbs/pp_khalid.jpg" class="reviews__review__thumb rounded-circle float-start mb-2 mb-sm-0 me-sm-3" width="100" height="100" alt="thumb">
+                                        <div>
+                                            <div class="d-sm-flex justify-content-sm-between align-items-center">
+                                                <div>
+                                                    <h5 class="reviews__review__name m-0">Abdullah Khalid</h5>
+                                                    <small class="reviews__review__time text-gray-600">March 28, 2022 at 10:38 am</small>
+                                                </div>
+                                                <ul class="reviews__review__rating list-inline text-warning m-0 p-0">
+                                                    <li class="list-inline-item small me-0"><i class="fas fa-star"></i></li>
+                                                    <li class="list-inline-item small me-0"><i class="fas fa-star"></i></li>
+                                                    <li class="list-inline-item small me-0"><i class="fas fa-star"></i></li>
+                                                    <li class="list-inline-item small me-0"><i class="fas fa-star"></i></li>
+                                                    <li class="list-inline-item small me-0"><i class="fa-regular fa-star"></i></i></li>
+                                                </ul>
+                                            </div>
+                                            <h6 class="reviews__review__course"><span class="text-gray-600 fw-400">Review on:</span> <a href="#">Lorem ipsum dolor sit amet</a></h6>
+                                            <p class="reviews__review__text text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate ad animi? Rerum similique nostrum illo? Dicta, dolore aut porro cumque aperiam error animi eaque quibusdam voluptatem libero consequuntur facere totam id veniam praesentium fugiat aliquam adipisci nemo recusandae aliquid.</p>
+                                            <div class="d-flex justify-content-end">
+                                                <button type="button" class="btn btn-sm py-2 px-3 bg-primary text-primary bg-opacity-10 fw-500 rounded-4 me-2" data-bs-toggle="modal" data-bs-target="#reviewEditModal">Edit</button>
+                                                <a href="#" class="btn btn-sm py-2 px-3 bg-danger text-danger bg-opacity-10 fw-500 rounded-4">Delete</a>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+
+                                     <!-- Review Item -->
+                                     <div class="reviews__review d-sm-flex">
+                                        <img src="images/user-thumbs/pp_khalid.jpg" class="reviews__review__thumb rounded-circle float-start mb-2 mb-sm-0 me-sm-3" width="100" height="100" alt="thumb">
+                                        <div>
+                                            <div class="d-sm-flex justify-content-sm-between align-items-center">
+                                                <div>
+                                                    <h5 class="reviews__review__name m-0">Abdullah Khalid</h5>
+                                                    <small class="reviews__review__time text-gray-600">March 28, 2022 at 10:38 am</small>
+                                                </div>
+                                                <ul class="reviews__review__rating list-inline text-warning m-0 p-0">
+                                                    <li class="list-inline-item small me-0"><i class="fas fa-star"></i></li>
+                                                    <li class="list-inline-item small me-0"><i class="fas fa-star"></i></li>
+                                                    <li class="list-inline-item small me-0"><i class="fas fa-star"></i></li>
+                                                    <li class="list-inline-item small me-0"><i class="fas fa-star"></i></li>
+                                                    <li class="list-inline-item small me-0"><i class="fa-regular fa-star"></i></i></li>
+                                                </ul>
+                                            </div>
+                                            <h6 class="reviews__review__course"><span class="text-gray-600 fw-400">Review on:</span> <a href="#">Lorem ipsum dolor sit amet</a></h6>
+                                            <p class="reviews__review__text text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate ad animi? Rerum similique nostrum illo? Dicta, dolore aut porro cumque aperiam error animi eaque quibusdam voluptatem libero consequuntur facere totam id veniam praesentium fugiat aliquam adipisci nemo recusandae aliquid.</p>
+                                            <div class="d-flex justify-content-end">
+                                                <button type="button" class="btn btn-sm py-2 px-3 bg-primary text-primary bg-opacity-10 fw-500 rounded-4 me-2" data-bs-toggle="modal" data-bs-target="#reviewEditModal">Edit</button>
+                                                <a href="#" class="btn btn-sm py-2 px-3 bg-danger text-danger bg-opacity-10 fw-500 rounded-4">Delete</a>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                     <!-- Review Item -->
+                                     <div class="reviews__review d-sm-flex">
+                                        <img src="images/user-thumbs/pp_khalid.jpg" class="reviews__review__thumb rounded-circle float-start mb-2 mb-sm-0 me-sm-3" width="100" height="100" alt="thumb">
+                                        <div>
+                                            <div class="d-sm-flex justify-content-sm-between align-items-center">
+                                                <div>
+                                                    <h5 class="reviews__review__name m-0">Abdullah Khalid</h5>
+                                                    <small class="reviews__review__time text-gray-600">March 28, 2022 at 10:38 am</small>
+                                                </div>
+                                                <ul class="reviews__review__rating list-inline text-warning m-0 p-0">
+                                                    <li class="list-inline-item small me-0"><i class="fas fa-star"></i></li>
+                                                    <li class="list-inline-item small me-0"><i class="fas fa-star"></i></li>
+                                                    <li class="list-inline-item small me-0"><i class="fas fa-star"></i></li>
+                                                    <li class="list-inline-item small me-0"><i class="fas fa-star"></i></li>
+                                                    <li class="list-inline-item small me-0"><i class="fa-regular fa-star"></i></i></li>
+                                                </ul>
+                                            </div>
+                                            <h6 class="reviews__review__course"><span class="text-gray-600 fw-400">Review on:</span> <a href="#">Lorem ipsum dolor sit amet</a></h6>
+                                            <p class="reviews__review__text text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis cupiditate ad animi? Rerum similique nostrum illo? Dicta, dolore aut porro cumque aperiam error animi eaque quibusdam voluptatem libero consequuntur facere totam id veniam praesentium fugiat aliquam adipisci nemo recusandae aliquid.</p>
+                                            <div class="d-flex justify-content-end">
+                                                <button type="button" class="btn btn-sm py-2 px-3 bg-primary text-primary bg-opacity-10 fw-500 rounded-4 me-2" data-bs-toggle="modal" data-bs-target="#reviewEditModal">Edit</button>
+                                                <a href="#" class="btn btn-sm py-2 px-3 bg-danger text-danger bg-opacity-10 fw-500 rounded-4">Delete</a>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-footer py-3 d-flex align-items-center justify-content-between">
+                                <h6 class="m-0">Showing 1 to 8 of 20 entries</h6>
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination pagination-sm mb-0">
+                                      <li class="page-item"><a class="page-link disabled" href="#"><i class="fas fa-chevron-left"></i></a></li>
+                                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                      <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a></li>
+                                    </ul>
+                                  </nav>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- PROFILE SECTION: END -->
+
+
+    
+    <!-- FOOTER SECTION: START -->
+    <section class="footer shadow">
+        <!-- Footer content -->
+        <div class="footer__content">
+            <div class="container">
+                <div class="row">
+                    <!-- Location Widget -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="widget">
+                            <img class="footer__logo" src="images/logo-white.svg" alt="Logo">
+                            <ul class="footer__content__location footer__ul">
+                                <li>
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <a href="tel:01717678426" class="text-decoration-none">+880123456789</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <a href="mailto:info@example.com" class="text-decoration-none">info@example.com</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                    <a href="#" class="text-decoration-none">BRUR, Rangpur, Bangladesh</a>
+                                </li>
+                            </ul>
+                            <div class="footer__social-icons">
+                                <a href="#" class="facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#" class="twitter" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#" class="github" title="Github"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="linkedin" title="Linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="widget">
+                            <h4 class="widget__head">Useful links</h4>
+                            <ul class="footer__ul">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about-us.html">About</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="widget">
+                            <h4 class="widget__head">Support</h4>
+                            <ul class="footer__ul">
+                                <li><a href="page.html">DOC</a></li>
+                                <li><a href="page.html">Support</a></li>
+                                <li><a href="faq-page.html">FAQ</a></li>
+                                <li><a href="page.html">Download</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="widget">
+                            <h4 class="widget__head">Terms</h4>
+                            <ul class="footer__ul">
+                                <li><a href="page.html">Term & Condition</a></li>
+                                <li><a href="page.html">Privacy & Policy</a></li>
+                                <li><a href="page.html">Partners</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <div class="container">
+                <p class="m-0 text-center">&copy; Copyright 2022 <a href="index.html">marjia-lms</a> All rights reserved</p>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER SECTION: END -->
+
+
+    <!-- BACK TO TOP -->
+    <a href="#" id="back-to-top" class="back-to-top shadow-lg"><i class="fas fa-chevron-up"></i></a>
+
+
+
+
+
+
+
+    <!-- Review Edit Modal -->
+    <div class="modal fade" id="reviewEditModal" tabindex="-1" aria-labelledby="reviewEditModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reviewEditModalLabel">Edit Review</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="#">
+                    <div class="modal-body">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label for="" class="mb-2">Review</label>
+                                <textarea class="form-control" name="review_text" rows="4" placeholder="Your review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eius tempora deserunt pariatur, qui repellendus atque iste laudantium consectetur animi?</textarea>
+                            </div>
+                            <div class="col-12">
+                                <label for="" class="mb-2">Rating</label>
+                                <div class="form-control">
+                                    <div class="d-flex">
+                                        <div id="reviewRating"></div>
+                                        <input id="reviewRatingInput" type="hidden" name="">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendors/js/glightbox.min.js"></script>
+    <script src="assets/vendors/js/owl.carousel.min.js"></script>
+    <script src="assets/vendors/js/rating.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

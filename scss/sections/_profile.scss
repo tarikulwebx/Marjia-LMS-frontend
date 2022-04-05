@@ -1,0 +1,358 @@
+@use '../custom' as *;
+
+.profile {
+
+    &__cover {
+        height: 7.5rem;
+        background: linear-gradient(135deg, $indigo, $secondary);
+
+        @include media-breakpoint-down(md) {
+            height: 8rem;
+        }
+    }
+
+    &__head {
+        margin-top: -2.25rem;
+        margin-bottom: 2rem;
+
+
+        .card {
+            background-color: transparent;
+            border-radius: 0;
+
+            @include media-breakpoint-down(xl) {
+                margin-bottom: 1.5rem;
+                padding-bottom: 1.5rem !important;
+                border-bottom: 1px solid $gray-300 !important;
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 1rem;
+                padding-bottom: 1rem !important;
+            }
+        }
+        
+        img {
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%;
+            background-color: $white;
+            padding: 0.15rem;
+        }
+
+        .user-info {
+            &__name {
+                font-size: 1.5rem;
+                color: $gray-900;
+            }
+    
+            &__list {
+                font-size: 0.975rem;
+                
+                .h6 {
+                    color: $gray-800;
+                    font-size: 0.95rem;
+                }
+    
+                .text {
+                    font-weight: 400;
+                    color: $gray-600;
+                }
+            }
+
+            .view-btn {
+                font-size: 0.925rem;
+                border-radius: 0.4rem;
+            }
+        }
+
+        
+
+        .offcanvas-toggler-btn {
+            white-space: nowrap;
+            height: -webkit-fit-content;
+            height: -moz-fit-content;
+            height: fit-content;
+            border-radius: 0.4rem;
+            font-weight: 500;
+        }
+    }
+
+    &__content {
+
+        // Menu
+        .nav-menu {
+            border-radius: 0.5rem;
+            background-color: $primary;
+            background: linear-gradient(110deg, $primary 70%, $secondary 100%);
+
+            .list-group-item {
+                padding: 0.5rem 1rem;
+                margin-bottom: 0.525rem;
+                background-color: transparent;
+                color: $white;
+                font-size: 0.97rem;
+                font-weight: 400;
+                border-radius: 0.325rem;
+                transition: 0.25s;
+    
+                &:hover,
+                &.active {
+                    background-color: $white;
+                    color: $dark;
+                }
+            }
+        }
+
+    
+        // Courses
+        &__courses {
+
+            thead {
+                tr th {
+                    padding: 0.75rem;
+                    margin-bottom: 1rem;
+
+                    &:first-child {
+                        border-top-left-radius: 0.4rem;
+                        border-bottom-left-radius: 0.4rem;
+                    }
+
+                    &:last-child {
+                        border-top-right-radius: 0.4rem;
+                        border-bottom-right-radius: 0.4rem;
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    td {
+                        padding: 1rem 0.5rem;
+                        border-bottom: 1px solid $gray-300;
+                    }
+
+                    &:last-child {
+                        td {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+
+            // Course Data
+            .course {
+                &__thumb {
+                    width: 6rem;
+                    height: 4.5rem;
+                    -o-object-fit: cover;
+                       object-fit: cover;
+                }
+
+                &__title {
+                    font-size: 1rem;
+                    font-weight: 700;
+                    white-space: nowrap;
+                    
+                    a {
+                        color: $gray-800;
+                        transition: 0.2s;
+                        
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+                }
+
+                &__progress {
+                    .progress {
+                        background-color: rgba($primary, 0.1);
+                    }
+                }
+
+                &__btn {
+                    font-size: 0.9rem !important;
+                    font-weight: 400;
+                    padding: 0.325rem 0.75rem;
+                    transition: 0.2s;
+
+                    &:focus,
+                    &:active,
+                    &:hover {
+                        box-shadow: none;
+                    }
+                    
+
+                    &--continue {
+                        background-color: rgba($primary, 0.15);
+                        color: $primary;
+
+                        &:focus,
+                        &:active,
+                        &:hover {
+                            background-color: $primary;
+                            color: $white;
+                        }
+                    }
+
+                    &--complete {
+                        color: $green;
+                    }
+
+                    &--restart {
+                        background-color: rgba($gray-800, 0.1);
+                        color: $gray-800;
+
+                        &:focus,
+                        &:active,
+                        &:hover {
+                            background-color: $gray-600;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        // Edit profile
+        &__editprofile {
+
+            .editform {
+                &__picture {
+                    img {
+                        width: 6rem;
+                        height: 6rem;
+                        background-color: $white;
+                        padding: 0.25rem;
+                        -o-object-fit: cover;
+                           object-fit: cover;
+                    }
+
+                    button {
+                        width: 1.325rem;
+                        height: 1.325rem;
+                        line-height: 0;
+                        text-align: center;
+                        color: $white;
+                        font-size: 0.65rem;
+                        padding: 0;
+                        top: 0.7rem;
+                        left: 84%
+                    }
+                }
+
+                label {
+                    margin-bottom: 0.4rem;
+                    font-size: 0.98rem;
+                    color: $gray-600;
+                }
+
+                .form-control {
+                    color: $gray-800;
+                    font-size: 0.99rem;
+                    border-radius: 0.4rem;
+                    background-color: rgba($dark, 0.005);
+
+                    &::-webkit-input-placeholder {
+                        color: $gray-500;
+                    }
+
+                    &::-moz-placeholder {
+                        color: $gray-500;
+                    }
+
+                    &:-ms-input-placeholder {
+                        color: $gray-500;
+                    }
+
+                    &::-ms-input-placeholder {
+                        color: $gray-500;
+                    }
+
+                    &::placeholder {
+                        color: $gray-500;
+                    }
+
+                    
+                }
+            }
+
+        }
+
+        // Delete profile
+        &__deleteprofile {
+            .btn {
+                transition: 0.25s;
+                font-size: 0.925rem;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+
+
+        // Reviews
+        &__reviews {
+            .reviews {
+                &__review {
+                    border-bottom: 1px solid $gray-200;
+                    padding-top: 1.25rem;
+                    padding-bottom: 1.25rem;
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    &__time {
+                        font-size: 0.8rem;
+                    }
+
+                    &__course {
+                        margin-top: 1rem;
+                        a {
+                            text-decoration: none;
+                            color: $gray-900;
+                            transform: 0.2s;
+
+                            &:hover {
+                                color: $primary;
+                            }
+                        }
+                    }
+
+                    &__text {
+                        font-size: 0.985rem;
+                    }
+                }
+            }
+
+            .pagination {
+                .page-item {
+                    .page-link {
+                        background-color: rgba($primary, 0.1);
+                        color: $primary;
+    
+                        &:hover {
+                            background-color: $primary;
+                            color: $white;
+                        }
+                    }
+
+                    &:first-child,
+                    &:last-child {
+                        .page-link {
+                            background-color: rgba($primary, 0.1);
+                            color: $primary;
+
+                            &:hover {
+                                background-color: $primary;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

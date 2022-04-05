@@ -1,0 +1,120 @@
+@use '../custom' as *;
+
+.review-section {
+
+    .review {
+        font-family: 'Heebo', sans-serif;
+        border: none;
+
+        &__body {
+            background-color: rgba($blue, 0.1);
+            padding: 2rem;
+            border-radius: 0.25rem;
+            border: none;
+            box-shadow: 4px 4px 8px rgba($dark, 0.5);
+        }
+
+        &__text {
+            font-weight: 400;
+            color: $gray-800;
+            font-size: 1.1rem;
+
+            i {
+                font-size: 1.5rem;
+                color: $purple;
+            }
+        }
+
+        &__ratings {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.25rem;
+
+            i {
+                color: $yellow;
+                margin-right: 0.25rem;
+            }
+
+            span {
+                margin-left: 0.5rem;
+                line-height: 1;
+                font-weight: 500;
+                color: $gray-800;
+            }
+        }
+
+        &__thumb {
+            width: 4rem !important;
+            background-color: $white;
+            padding: 0.325rem;
+            margin-right: 0.75rem;
+        }
+
+        
+
+        &__title {
+            color: $dark;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        &__subtitle {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        
+    }
+
+
+
+    .owl-nav {
+        text-align: center;
+        margin-top: 2rem !important;
+        button {
+            margin: 0 0.25rem;
+            i {
+                border: 2px solid rgba($color: $indigo, $alpha: 0.6);
+                background-color: $white;
+                color: $indigo;
+                padding: 0.6rem 1.1rem;
+                border-radius: .25rem;
+                transition: all .2s;
+            }
+    
+            &:hover {
+                i {
+                    background-color: $indigo;
+                    color: $white;
+                    transition: all .2s;
+                }
+            }
+        }
+    }
+    
+    .owl-dots {
+        .owl-dot {
+            font-size: 0.8rem;
+            &.active {
+                color: $purple !important;
+            }
+        }
+    }
+    
+    // CAROUSEL BUG CORRECTION
+    .owl-item {
+        opacity: 0;
+        padding: 0.8rem;
+    }
+    
+    .owl-item.active {
+        opacity: 1;
+    }
+
+    
+}
+
+
+    
+    

@@ -1,0 +1,184 @@
+@use '../custom' as *;
+
+
+.lesson {
+    margin-top: 1.5rem;
+
+    &__sidenav {
+        .offcanvas {
+            background-color: $primary;
+            background: linear-gradient(100deg, rgba($indigo, 0.9), rgba($secondary, 0.9));
+            padding: 0.25rem;
+            border-radius: 0.2rem;
+            .offcanvas-body {
+                background-color: $white;
+                padding: 1rem;
+                border-radius: 0.2rem;
+
+                .sidenav {
+                    &__brand {
+                        font-size: 1.45rem;
+                        color: $dark;
+                    }
+            
+                    &__heading {
+                        color: $dark;
+                        font-size: 1.2rem;
+                        margin-top: 2rem;
+                        font-weight: 600;
+            
+                        &:first-of-type {
+                            margin-top: 0.75rem;
+                        }
+                    }
+
+                    .nav-item {
+                        .nav-link {
+                            padding: 0.22rem 0.6rem;
+                            margin-bottom: 0.2rem;
+                            color: $gray-900;
+                            font-family: 'Heebo', sans-serif;
+                            font-weight: 400;
+                            font-size: 1rem;
+                            transition: 0.25s;
+                            border-radius: 0.125rem;
+                            border-radius: 0.1rem;
+            
+                            i {
+                                color: $secondary;
+                                margin-right: 0.6rem;
+                                font-size: 0.95rem;
+                            }
+            
+                            &:hover {
+                                background-color: rgba($primary, 0.1);
+                                color: $primary;
+            
+                                i {
+                                    color: $primary;
+                                }
+                            }
+                        }
+            
+                        &.read {
+                            .nav-link {
+                                background-color: rgba($green, 0.04);
+                                i {
+                                    color: #1FCC58;
+                                }
+                            }  
+                        }
+            
+                        &.active {
+                            .nav-link {
+                                background-color: rgba($primary, 0.1);
+                                color: $primary;
+            
+                                i {
+                                    color: $primary;
+                                }
+                            }
+                        }
+            
+                        
+                    }
+                }
+            }
+        }
+
+        
+
+    }
+
+    &__content {
+
+        @include media-breakpoint-up(xl) {
+            padding-left: 0.75rem;
+        }
+
+        &__head {
+            h1 {
+                font-weight: 600;
+                font-family: 'Heebo', sans-serif;
+                font-size: 3rem;
+                color: $gray-700;
+            }
+
+            #showSidebarBtn {
+                background-color: rgba($primary, 0.125);
+                color: $primary;
+                font-weight: 500;
+                outline: none !important;
+                border: none !important;
+                box-shadow: none !important;
+                
+                @include media-breakpoint-up(sm) {
+                    width: 7rem;
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
+                }
+
+                i {
+                    margin-right: 0.4rem;
+                }
+            }
+
+            .navigation {
+                .btn {
+                    font-weight: 500;
+                    transition: 0.3s;
+
+                    i {
+                        font-size: 0.95rem;
+                    }
+
+                    &:hover {
+                        opacity: 0.75;
+                    }
+
+                    @include media-breakpoint-up(sm) {
+                        width: 7rem;
+                        padding-top: 0.5rem;
+                        padding-bottom: 0.5rem;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        width: auto;
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            p {
+                color: $gray-700;
+            }
+        }
+
+        &__body {
+            color: $gray-700;
+            padding-bottom: 2rem;
+            
+            a {
+                text-decoration: none;
+                color: $secondary;
+                transition: 0.25s;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+
+            h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+                font-weight: 600;
+                color: $dark;
+            }
+
+            h4, h5, h6 {
+                font-weight: 500;
+            }
+        }
+
+    }
+}

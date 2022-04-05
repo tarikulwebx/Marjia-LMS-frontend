@@ -1,0 +1,139 @@
+@use '../custom' as *;
+
+.footer {
+    background: linear-gradient(to right, $gray-900, $gray-700);
+    font-family: 'Heebo', sans-serif;
+    margin-top: 6rem;
+
+    &__content {
+        padding: 0 0 3.75rem;
+
+        .widget {
+            margin-top: 3.75rem;
+
+            &__head {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                color: $white;
+            }
+        }
+
+        &__location {
+            margin-bottom: 2rem !important;
+            li {
+                i {
+                    color: $gray-500;
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+    }
+
+    &__ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-bottom: 0.5rem;
+            color: $gray-400;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            a {
+                text-decoration: none;
+                font-weight: 400;
+                color: $gray-400;
+                transition: 0.2s;
+
+                &:hover {
+                    color: $gray-100;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        max-height: 40px;
+        margin-bottom: 1rem;
+    }
+
+    &__social-icons {
+        display: flex;
+        align-items: center;
+
+        a {
+            margin-right: 0.75rem;
+
+            i {
+                width: 32px;
+                height: 32px;
+                line-height: 32px;
+                background-color: $black;
+                color: $white;
+                text-align: center;
+                border-radius: 50%;
+                transition: all 0.2s;
+            }
+
+            &.facebook i {
+                background-color: #1877f2;
+            }
+
+            &.twitter i {
+                background-color: #1da1f2;
+            }
+
+            &.github i {
+                background-color: #6e5494;
+            }
+
+            &.linkedin i {
+                background-color: #0077b5;
+            }
+
+            &:hover {
+                i {
+                    background-color: $white;
+                    color: $dark;
+                }
+            }
+
+            &.facebook:hover i {
+                color: #1877f2;
+            }
+
+            &.twitter:hover i {
+                color: #1da1f2;
+            }
+
+            &.github:hover i {
+                color: #6e5494;
+            }
+
+            &.linkedin:hover i {
+                color: #0077b5;
+            }
+            
+        }
+    }
+
+    &__copyright {
+        color: $white;
+        background-color: $gray-900;
+        padding: 2rem;
+        font-weight: 400;
+        font-size: 0.95rem;
+        
+        p {
+            color: $gray-400;
+
+            a {
+                color: $pink;
+                text-decoration: none;
+            }
+        }
+    }
+}

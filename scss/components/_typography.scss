@@ -1,0 +1,616 @@
+@use '../custom' as *;
+
+
+body {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 400;
+    color: $gray-700;
+
+    &::-webkit-scrollbar {
+        width: 0.65rem;
+        background-color: $secondary;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 50rem;
+        background-color: #f1f1f1;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $primary;
+        border-radius: 50rem;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: rgba($primary, 0.7);
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+
+// SECTION HEAD
+.section-head {
+    font-family: 'Heebo', sans-serif;
+    margin-bottom: 2rem;
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.15rem;
+
+        @include media-breakpoint-down(lg) {
+            font-size: 2.25rem;
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: 2rem;
+        }
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 1.1rem;
+
+        @include media-breakpoint-down(md) {
+            font-size: 1rem;
+        }
+    }
+
+    .btn {
+        font-size: 1.2rem;
+
+        &.btn-grid {
+            color: $green;
+            margin-right: 0.25rem;
+        }
+
+        &.btn-list {
+            color: $blue;
+        }
+    }
+}
+
+
+// SINGLE PAGE
+.page {
+    position: relative;
+    .page-head {
+        position: relative;
+        padding: 3rem 0 28rem;
+        z-index: 0;
+        
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(to right, $indigo, $secondary);
+            -webkit-clip-path: polygon(100% 0, 0 0, 0 77.5%, 1% 77.4%, 2% 77.1%, 3% 76.6%, 4% 75.9%, 5% 75.05%, 6% 74.05%, 7% 72.95%, 8% 71.75%, 9% 70.55%, 10% 69.3%, 11% 68.05%, 12% 66.9%, 13% 65.8%, 14% 64.8%, 15% 64%, 16% 63.35%, 17% 62.85%, 18% 62.6%, 19% 62.5%, 20% 62.65%, 21% 63%, 22% 63.5%, 23% 64.2%, 24% 65.1%, 25% 66.1%, 26% 67.2%, 27% 68.4%, 28% 69.65%, 29% 70.9%, 30% 72.15%, 31% 73.3%, 32% 74.35%, 33% 75.3%, 34% 76.1%, 35% 76.75%, 36% 77.2%, 37% 77.45%, 38% 77.5%, 39% 77.3%, 40% 76.95%, 41% 76.4%, 42% 75.65%, 43% 74.75%, 44% 73.75%, 45% 72.6%, 46% 71.4%, 47% 70.15%, 48% 68.9%, 49% 67.7%, 50% 66.55%, 51% 65.5%, 52% 64.55%, 53% 63.75%, 54% 63.15%, 55% 62.75%, 56% 62.55%, 57% 62.5%, 58% 62.7%, 59% 63.1%, 60% 63.7%, 61% 64.45%, 62% 65.4%, 63% 66.45%, 64% 67.6%, 65% 68.8%, 66% 70.05%, 67% 71.3%, 68% 72.5%, 69% 73.6%, 70% 74.65%, 71% 75.55%, 72% 76.35%, 73% 76.9%, 74% 77.3%, 75% 77.5%, 76% 77.45%, 77% 77.25%, 78% 76.8%, 79% 76.2%, 80% 75.4%, 81% 74.45%, 82% 73.4%, 83% 72.25%, 84% 71.05%, 85% 69.8%, 86% 68.55%, 87% 67.35%, 88% 66.2%, 89% 65.2%, 90% 64.3%, 91% 63.55%, 92% 63%, 93% 62.65%, 94% 62.5%, 95% 62.55%, 96% 62.8%, 97% 63.3%, 98% 63.9%, 99% 64.75%, 100% 65.7%);
+            clip-path: polygon(100% 0, 0 0, 0 77.5%, 1% 77.4%, 2% 77.1%, 3% 76.6%, 4% 75.9%, 5% 75.05%, 6% 74.05%, 7% 72.95%, 8% 71.75%, 9% 70.55%, 10% 69.3%, 11% 68.05%, 12% 66.9%, 13% 65.8%, 14% 64.8%, 15% 64%, 16% 63.35%, 17% 62.85%, 18% 62.6%, 19% 62.5%, 20% 62.65%, 21% 63%, 22% 63.5%, 23% 64.2%, 24% 65.1%, 25% 66.1%, 26% 67.2%, 27% 68.4%, 28% 69.65%, 29% 70.9%, 30% 72.15%, 31% 73.3%, 32% 74.35%, 33% 75.3%, 34% 76.1%, 35% 76.75%, 36% 77.2%, 37% 77.45%, 38% 77.5%, 39% 77.3%, 40% 76.95%, 41% 76.4%, 42% 75.65%, 43% 74.75%, 44% 73.75%, 45% 72.6%, 46% 71.4%, 47% 70.15%, 48% 68.9%, 49% 67.7%, 50% 66.55%, 51% 65.5%, 52% 64.55%, 53% 63.75%, 54% 63.15%, 55% 62.75%, 56% 62.55%, 57% 62.5%, 58% 62.7%, 59% 63.1%, 60% 63.7%, 61% 64.45%, 62% 65.4%, 63% 66.45%, 64% 67.6%, 65% 68.8%, 66% 70.05%, 67% 71.3%, 68% 72.5%, 69% 73.6%, 70% 74.65%, 71% 75.55%, 72% 76.35%, 73% 76.9%, 74% 77.3%, 75% 77.5%, 76% 77.45%, 77% 77.25%, 78% 76.8%, 79% 76.2%, 80% 75.4%, 81% 74.45%, 82% 73.4%, 83% 72.25%, 84% 71.05%, 85% 69.8%, 86% 68.55%, 87% 67.35%, 88% 66.2%, 89% 65.2%, 90% 64.3%, 91% 63.55%, 92% 63%, 93% 62.65%, 94% 62.5%, 95% 62.55%, 96% 62.8%, 97% 63.3%, 98% 63.9%, 99% 64.75%, 100% 65.7%);
+        }
+
+
+        &__title {
+            font-size: 3rem;
+            color: $white;
+
+            @include media-breakpoint-down(md) {
+                font-size: 2.5rem;
+            }
+        }
+
+        &__page-description {
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: $gray-100;
+        
+            @include media-breakpoint-up(xl) {
+                width: 60rem;
+            }
+
+            @include media-breakpoint-down(md) {
+                font-size: 1.05rem;
+            }
+        }
+
+        &__category {
+            font-weight: 500;
+            padding: 0.5rem .75rem;
+            font-size: 0.825rem;
+            margin-bottom: 0.5rem;
+        }
+    
+        &__meta {
+            margin-bottom: 1.5rem;
+    
+            .list-inline-item {
+                margin-right: 2rem;
+                margin-bottom: 0.75rem;
+                color: $white;
+                font-weight: 500;
+                letter-spacing: 0.03rem;
+    
+                i {
+                    color: rgba($yellow, 0.95);
+                    margin-right: 0.2rem;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    
+        &__author {
+            img {
+                width: 4.5rem;
+                height: 4.5rem;
+                margin-right: 0.75rem;
+                -o-object-fit: cover;
+                   object-fit: cover;
+                background-color: rgba($white, 0.5);
+                padding: 0.2rem;
+            }
+    
+            h5 {
+                font-weight: 500;
+                font-size: 1.35rem;
+                margin-bottom: 0.1rem;
+                a {
+                    color: $white;
+                }
+            }
+    
+            p {
+                color: rgba($white, 0.8);
+                font-weight: 400;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .page-content {
+        margin-top: -25rem;
+        position: relative;
+
+        &__body {
+            background-color: $white;
+            box-shadow: $box-shadow;
+            padding: 4rem;
+            border-radius: 0.8rem;
+
+            @include media-breakpoint-down(md) {
+                padding: 2.5rem;
+            }
+        }
+    }
+}
+
+
+
+
+// BACK TO TOP
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background-color: $primary;
+    color: $white;
+    width: 2.75rem;
+    height: 2.75rem;
+    line-height: 2.75rem;
+    text-align: center;
+    border-radius: 50%;
+    z-index: 9999;
+
+    i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+        color: $white;
+        opacity: 0.9;
+    }
+}
+
+
+
+// ABSOLUTE CENTER
+.absoluteCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+}
+
+
+
+// POPOVER
+.popover {
+    z-index: 999;
+}
+
+.popover-body {
+    a.social {
+        margin-right: 1rem;
+        font-size: 1.1rem;
+        background-color: $white;
+        transition: 0.2s;
+
+        &:hover {
+            opacity: 0.75;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.facebook {
+            color: #1877f2;
+        }
+
+        &.twitter {
+            color: #1da1f2;
+        }
+
+        &.copy {
+            color: $gray-800;
+        }
+    }
+}
+
+
+// PAGINATION
+.pagination {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 500;
+    .page-item {
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+        padding: 0;
+    }
+
+    .page-link {
+        font-weight: 500;
+        border-radius: 50%;
+        line-height: 1;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        text-align: center;
+        padding: 0 !important;
+        background-color: rgba($secondary, 0.15);
+
+        &:hover {
+            background-color: rgba($secondary, 0.85);
+            color: $white;
+        }
+    }
+
+    .page-item:first-child,
+    .page-item:last-child {
+        .page-link {
+            border-radius: 50% !important;
+            color: $dark;
+
+            &:hover {
+                background-color: rgba($secondary, 0.85);
+                color: $white;
+            }
+        }
+    }
+
+    .page-item.disabled {
+        .page-link {
+            color: #ddd;
+        }
+    }
+
+}
+
+
+// BREADCRUMB
+.breadcrumb {
+    font-family: 'Heebo', sans-serif;
+    margin: 0;
+
+    .breadcrumb-item {
+        font-weight: 400;
+
+        a {
+            text-decoration: none;
+            color: $primary !important;
+        }
+
+        &.active {
+            font-weight: 400;
+            
+        }
+    }
+}
+
+
+// GRADIENT BG
+.gradient-bg {
+    background: linear-gradient(to right, rgba($indigo, 0.95), rgba($pink, 0.95));
+}
+
+
+// LIST-GROUP BORDERLESS
+.list-group-borderless {
+    .list-group-item {
+        border: none !important;
+        padding: 0.4rem 0;
+    }
+}
+
+
+
+
+// LIST STYLES
+// Lists
+ul.list,
+ul.list-check,
+ul.list-forbidden,
+ol.list {
+    list-style: none;
+    padding: 0;
+    
+    @media screen and (min-width: 576px) {
+        padding-left: 1.5rem;
+    }
+    li {
+        position: relative;
+        margin-left: 1.5em;
+        &::before {
+            position: absolute;
+            left : -1.5em;
+            top: 50%;
+            transform: translateY(-50%);
+            color: $primary;
+        }
+    }
+
+}
+
+ul.list li::before {
+    content: "\f138";
+    font-family: 'FontAwesome';
+    color: $primary;
+}
+
+ul.list-check li::before {
+    content: "\f00c";
+    font-family: 'FontAwesome';
+    color: $primary;
+}
+
+ul.list-forbidden li::before {
+    content: "\f00d";
+    font-family: 'FontAwesome';
+    color: $red;
+}
+
+ol.list li {
+    counter-increment: step-counter;
+    margin-left: 1.6em;
+    &::before {
+        content: counter(step-counter) ".";
+        font-family: 'Heebo', sans-serif;
+        font-weight: 600;
+        left: -1.4em;
+    }
+}
+
+
+
+// BLOCKQUOTE
+.blockquote {
+    font-style: italic;
+    padding: 0.75rem 1rem;
+    border-left: 0.25rem solid $primary;
+    font-size: 1.25rem;
+
+    
+    .blockquote-footer {
+        display: block;
+        font-size: 1rem;
+        color: #6c757d;
+        margin-top: 1rem;
+    }
+}
+
+
+// MARK
+mark {
+    background-color: rgba(255, 255, 0, 0.4);
+    padding: 2px 5px;
+    border-radius: 3px;
+    color: $black;
+}
+
+
+// CODE TOOLBAR
+.code-toolbar {
+    .toolbar {
+        .toolbar-item {
+            margin-right: 0.5rem;
+            color: $primary;
+        
+            &:hover {
+                color: $secondary;
+                
+            }
+        }
+    }
+}
+
+
+
+//  DOWNLOADABLE FILES
+.downloadable-files {
+    a {
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        padding: 1rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        font-size: 1rem;
+        color: $primary;
+        transition: 0.25s;
+        background-color: rgba($primary, 0.1);
+
+        i {
+            color: $primary;
+            transition: 0.25s;
+        }
+
+        &:hover {
+            color: $secondary;
+            background-color: rgba($secondary, 0.1);
+
+            i {
+                color: $secondary;
+            }
+        }
+    }
+}
+
+
+
+
+// USEFUL CLASSES
+
+// Backgroun light primary color
+.bg-light-blue {
+    background-color: rgba($blue, 0.1);
+}
+
+// GRAY COLORS
+.text-gray-100 {
+    color: $gray-100 !important;
+}
+
+.text-gray-200 {
+    color: $gray-200 !important;
+}
+
+.text-gray-300 {
+    color: $gray-300 !important;
+}
+
+.text-gray-400 {
+    color: $gray-400 !important;
+}
+
+.text-gray-500 {
+    color: $gray-500 !important;
+}
+
+.text-gray-600 {
+    color: $gray-600 !important;
+}
+
+.text-gray-700 {
+    color: $gray-700 !important;
+}
+
+.text-gray-800 {
+    color: $gray-800 !important;
+}
+
+.text-gray-900 {
+    color: $gray-900 !important;
+}
+
+
+// BG GRAY COLORS
+.bg-gray-100 {
+    background-color: $gray-100 !important;
+}
+
+.bg-gray-200 {
+    background-color: $gray-200 !important;
+}
+
+.bg-gray-300 {
+    background-color: $gray-300 !important;
+}
+
+.bg-gray-400 {
+    background-color: $gray-400 !important;
+}
+
+.bg-gray-500 {
+    background-color: $gray-500 !important;
+}
+
+.bg-gray-600 {
+    background-color: $gray-600 !important;
+}
+
+.bg-gray-700 {
+    background-color: $gray-700 !important;
+}
+
+.bg-gray-800 {
+    background-color: $gray-800 !important;
+}
+
+.bg-gray-900 {
+    background-color: $gray-900 !important;
+}
+
+
+// FONT WEIGHTS
+.fw-300 {
+    font-weight: 300 !important;
+}
+.fw-400 {
+    font-weight: 400 !important;
+}
+.fw-500 {
+    font-weight: 500 !important;
+}
+.fw-600 {
+    font-weight: 600 !important;
+}
+.fw-700 {
+    font-weight: 700 !important;
+}
+.fw-800 {
+    font-weight: 800 !important;
+}
+
+
+// BRAND COLORS
+.color-facebook {
+    color: $facebook-color !important;
+}
+.color-instagram {
+    color: $instagram-color !important;
+}
+.color-twitter {
+    color: $twitter-color !important;
+}
+.color-linkedin {
+    color: $linkedin-color !important;
+}
+.color-github {
+    color: $github-color !important;
+}
+.color-telegram {
+    color: $telegram-color !important;
+}
+.color-google {
+    color: $google-color !important;
+}
